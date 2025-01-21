@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="btn"><span>Button</span></button>
+
+    <script>
+        const btn = document.querySelector(".btn");
+
+        btn.addEventListener('mouseover', (event)=>{
+            const x = event.pageX - btn.offsetLeft;
+            const y = event.pageY - btn.offsetTop;
+
+            btn.style.setProperty('--x', x + 'px')
+            btn.style.setProperty('--y', y + 'px')
+        })
+    </script>
+</body>
+</html>
